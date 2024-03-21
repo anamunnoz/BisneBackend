@@ -44,9 +44,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "GraphQL": {
+              "target": "Package",
+              "version": "[7.8.0, )"
+            },
             "HotChocolate.AspNetCore": {
               "target": "Package",
-              "version": "[13.8.1, )"
+              "version": "[13.9.0, )"
+            },
+            "HotChocolate.Types": {
+              "target": "Package",
+              "version": "[13.9.0, )"
+            },
+            "HotChocolate.Types.CursorPagination": {
+              "target": "Package",
+              "version": "[13.9.0, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",

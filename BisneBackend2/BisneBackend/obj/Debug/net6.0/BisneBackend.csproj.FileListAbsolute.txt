@@ -65,3 +65,5 @@ D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\obj\Debug\net6.0\BisneBacken
 D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\bin\Debug\net6.0\Humanizer.dll
 D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\bin\Debug\net6.0\GraphQL.dll
+D:\PC\CODES\Bisne\Backend\BisneBackend\BisneBackend\bin\Debug\net6.0\GraphQLParser.dll
