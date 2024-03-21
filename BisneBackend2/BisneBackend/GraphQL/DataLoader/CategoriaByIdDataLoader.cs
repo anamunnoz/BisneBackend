@@ -20,7 +20,7 @@ namespace BisneBackend.GraphQL.DataLoader
            CancellationToken cancellationToken){
             await using MyDbContext dbContext =
                 _dbContextFactory.CreateDbContext();
-
+            
             return await dbContext.Categorias
                 .Where(s => keys.Contains(s.Id))
                 .ToDictionaryAsync(t => t.Id, cancellationToken);

@@ -13,6 +13,10 @@ namespace BisneBackend.GraphQL.Tiendas
             [ScopedService] MyDbContext context,
             CancellationToken cancellationToken)
         {
+            var admin= new AdministradordeTienda { Id=input.administradorId };
+            context.Administradordes.Add(admin);
+            await context.SaveChangesAsync(cancellationToken);
+
             var tienda = new Tienda
             {
                 nombre  = input.nombre,
@@ -23,8 +27,12 @@ namespace BisneBackend.GraphQL.Tiendas
                 usuarioTelegram = input.usuarioTelegram,
                 linkFacebook = input.linkFacebook,
                 linkInstagram = input.linkInstagram,
+                provincia = input.provincia,
+                municipio = input.municipio,
+                direccion = input.direccion,
                 linkExtra = input.linkExtra,
                 ImageURL = input.urlImagen,
+
                 administradorId = input.administradorId    
             };
 
@@ -41,6 +49,7 @@ namespace BisneBackend.GraphQL.Tiendas
             CancellationToken cancellationToken)
             {
                 Tienda tienda = await context.Tiendas.FindAsync(input.Id);
+                if (input.direccion != null) tienda.direccion = input.direccion;
                 if (input.descripcion != null) tienda.descripcion = input.descripcion;
                 if (input.horario != null) tienda.horario = input.horario;
                 if (input.numeroWhatsapp != null) tienda.numeroWhatsapp = input.numeroWhatsapp;
@@ -50,9 +59,7 @@ namespace BisneBackend.GraphQL.Tiendas
                 if (input.linkInstagram != null) tienda.linkInstagram = input.linkInstagram;
                 if (input.linkExtra != null) tienda.linkExtra = input.linkExtra;
                 if (input.urlImagen != null) tienda.ImageURL = input.urlImagen;
-
-
-
+                
                 await context.SaveChangesAsync(cancellationToken);
 
                 return new UpdateTiendaPayload(tienda);

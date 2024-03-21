@@ -13,7 +13,7 @@ namespace BisneBackend.Data.Models
         [Display(Name ="Fecha")]
         public DateOnly fecha { get; set; }
 
-        [Required]
+        
         [MaxLength(100)]
         [Display(Name = "Direccion")]
         public string? direccion_envio { get; set; }

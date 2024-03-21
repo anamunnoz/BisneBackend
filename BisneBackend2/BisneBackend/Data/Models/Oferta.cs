@@ -21,14 +21,16 @@ namespace BisneBackend.Data.Models
         public string? descripcion { get; set; }
 
         [Required]
-        public int precio { get; set; }
-        [Required]
-        public int cantidad { get; set; }
-        public int? descuento { get; set; }
-
+        public int? precio { get; set; }
+        //[Required]
+        //public int cantidad { get; set; }
+        //public int? descuento { get; set; }
 
         [Required]
         public int tiendaId { get; set; }
+
+        [Required]
+        public string? ImageURL { get; set; }
 
         [ForeignKey("tiendaId")]
         public Tienda? tienda { get; set; }

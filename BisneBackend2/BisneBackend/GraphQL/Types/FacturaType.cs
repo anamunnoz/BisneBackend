@@ -11,11 +11,11 @@ namespace BisneBackend.GraphQL.Types
     {
         protected override void Configure(IObjectTypeDescriptor<Factura> descriptor)
         {
-            /*descriptor
+            descriptor
                 .ImplementsNode()
                 .IdField(t => t.Id)
                 .ResolveNode((ctx, id) => ctx.DataLoader<FacturaByIdByDataLoader>()
-                .LoadAsync(id, ctx.RequestAborted));*/
+                .LoadAsync(id, ctx.RequestAborted));
             descriptor
                 .Field(t => t.FacturaOfertas)
                 .ResolveWith<FacturaResolvers>(t => t.GetOfertasAsync(default!, default!, default!, default))

@@ -2,7 +2,7 @@
 
 namespace BisneBackend.GraphQL.Categorias
 {
-    public record AddCategoriaInput(string nombre, int? padreId);
+    public record AddCategoriaInput(string nombre, [property: ID(nameof(Categoria))]  int? padreId);
 
     
 }

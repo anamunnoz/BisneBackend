@@ -10,6 +10,8 @@ namespace BisneBackend.Data
 {
     public class MyDbContext : DbContext
     {
+       
+
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 
         public DbSet<Tienda> Tiendas { get; set; } = default!;
@@ -26,6 +28,7 @@ namespace BisneBackend.Data
         public DbSet<UsuarioOfertaValoracion> UsuarioOfertaValoraciones { get; set; } = default!;
         public DbSet<UsuarioTiendaComentario> UsuarioTiendaComentarios { get; set; } = default!;
         public DbSet<UsuarioTiendaFav> UsuarioTiendaFavs { get; set; } = default!;
+        public DbSet<UsuarioOfertaFav> UsuarioOfertaFavs { get; set; } = default!;
         public DbSet<UsuarioTiendaValoracion> UsuarioTiendaValoraciones { get; set; } = default!;
         public DbSet<FacturaOferta> FacturaOfertas { get; set; } = default!;
         public DbSet<OfertaCategoria> OfertaCategorias { get; set; } = default!;
@@ -37,6 +40,7 @@ namespace BisneBackend.Data
             modelBuilder.Entity<FacturaOferta>().HasKey(fo => new { fo.facturaId, fo.ofertaId });
             modelBuilder.Entity<OfertaCategoria>().HasKey(oc => new { oc.ofertaId, oc.categoriaId });
             modelBuilder.Entity<UsuarioOfertaComentario>().HasKey(uo => new { uo.usuarioId, uo.ofertaId });
+            modelBuilder.Entity<UsuarioOfertaFav>().HasKey(uo => new { uo.usuarioId, uo.ofertaId });
             modelBuilder.Entity<UsuarioOfertaValoracion>().HasKey(uo => new { uo.usuarioId, uo.ofertaId });
             modelBuilder.Entity<UsuarioTiendaComentario>().HasKey(ut => new { ut.usuarioId, ut.tiendaId });
             modelBuilder.Entity<UsuarioTiendaFav>().HasKey(ut => new { ut.usuarioId, ut.tiendaId });

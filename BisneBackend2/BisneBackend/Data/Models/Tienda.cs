@@ -12,7 +12,6 @@ namespace BisneBackend.Data.Models
     public class Tienda
     {
         [Key]
-      
         public int Id { get; set; }
 
         [Required]
@@ -20,21 +19,34 @@ namespace BisneBackend.Data.Models
         [Display(Name = "Nombre")]
         public string? nombre { get; set; }
 
-        [Required]
-        [MaxLength(200)]
-        [Display(Name = "Descripcion")]
-        public string? descripcion { get; set; }
+        [MaxLength(50)]
+        [Display(Name = "Direccion")]
+        public string? direccion { get; set; }
 
         [Required]
         [MaxLength(50)]
+        [Display(Name = "Provincia")]
+        public string? provincia { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        [Display(Name = "Municipio")]
+        public string? municipio { get; set; }
+
+        [Required]
+        [MaxLength(1000)]
+        [Display(Name = "Descripcion")]
+        public string? descripcion { get; set; }
+
+        [MaxLength(150)]
         [Display(Name = "Horario")]
         public string? horario { get; set; }
 
         [Display(Name = "NumeroWhatsapp")]
-        public int? numeroWhatsapp { get; set; }
+        public string? numeroWhatsapp { get; set; }
 
         [Display(Name = "NumeroTelefono")]
-        public int? numeroTelefono { get; set; }
+        public string? numeroTelefono { get; set; }
 
         [MaxLength(20)]
         [Display(Name = "UsuarioTelegram")]
@@ -64,10 +76,5 @@ namespace BisneBackend.Data.Models
         public IList<UsuarioTiendaFav> usuarioTiendaFavs { get; set; } = new List<UsuarioTiendaFav>();
         public IList<UsuarioTiendaValoracion> usuarioTiendaValoraciones { get; set; }= new List<UsuarioTiendaValoracion>();
         public IList<UsuarioTiendaComentario> usuarioTiendaComentarios { get; set; }= new List<UsuarioTiendaComentario>();
-
-
-
-
-
     }
 }

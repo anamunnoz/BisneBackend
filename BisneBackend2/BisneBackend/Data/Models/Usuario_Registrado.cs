@@ -24,6 +24,9 @@ namespace BisneBackend.Data.Models
         [Display(Name = "Password")]
         public string? password { get; set; }
 
+        
+        public string? ImageURL { get; set; }
+
         public ICollection<Factura> facturas { get; set; } = new List<Factura>();
         public ICollection<UsuarioIp> UsuarioIps { get; set; } = new List<UsuarioIp>();
         public ICollection<UsuarioTiendaFav> usuarioTiendaFavs { get; set; }= new List<UsuarioTiendaFav>();

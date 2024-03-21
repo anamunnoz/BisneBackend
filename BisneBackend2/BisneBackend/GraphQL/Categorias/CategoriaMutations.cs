@@ -1,5 +1,4 @@
 ﻿using BisneBackend.GraphQL.Payloads;
-using BisneBackend.GraphQL.Inputs;
 using BisneBackend.Data;
 using BisneBackend.Data.Models;
 using BisneBackend.Data.Extensions;
@@ -18,9 +17,8 @@ namespace BisneBackend.GraphQL.Categorias
             {
                 nombre = input.nombre,
                 padreId = input.padreId,
-         
-
             };
+            //categoria.padre = (Categoria?)context.Categorias.Where(s=>s.Id==input.padreId);
             context.Categorias.Add(categoria);
             await context.SaveChangesAsync();
             

@@ -11,11 +11,11 @@ namespace BisneBackend.GraphQL.Types
     {
         protected override void Configure(IObjectTypeDescriptor<Tienda> descriptor)
         {
-            /*descriptor
+            descriptor
                 .ImplementsNode()
                 .IdField(t => t.Id)
                 .ResolveNode((ctx, id) => ctx.DataLoader<TiendaByIdDataLoader>()
-                .LoadAsync(id, ctx.RequestAborted));*/
+                .LoadAsync(id, ctx.RequestAborted));
             descriptor
                 .Field(t => t.ofertas)
                 .ResolveWith<TiendaResolvers>(t => t.GetOfertasAsync(default!, default!, default!, default))

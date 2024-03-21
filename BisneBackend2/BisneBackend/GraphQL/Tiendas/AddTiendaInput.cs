@@ -5,14 +5,17 @@ namespace BisneBackend.GraphQL.Tiendas
     public record AddTiendaInput(
         string nombre,
         string descripcion,
+        string? direccion,
         string? horario,
-        int? numeroWhatsapp,
-        int? numeroTelefono,
+        string? numeroWhatsapp,
+        string? numeroTelefono,
+        string provincia,
+        string municipio,
         string? usuarioTelegram,
         string? linkFacebook,
         string? linkInstagram,
         string? linkExtra,
         string? urlImagen,
-        [ID(nameof(AdministradordeTienda))]
+        [property: ID(nameof(Usuario_Registrado))]
         int administradorId);
 }
