@@ -6,18 +6,28 @@ using BisneBackend.GraphQL.Types;
 using BisneBackend.GraphQL.Categorias;
 using Microsoft.EntityFrameworkCore;
 using BisneBackend.GraphQL.Tiendas;
+using BisneBackend.GraphQL.Ofertas;
+using BisneBackend.GraphQL.Usuarios;
+using BisneBackend.GraphQL.Facturas;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
     .AddGraphQLServer()
+    .AddQueryableCursorPagingProvider()
     .AddQueryType(d => d.Name("Query"))
         .AddTypeExtension<CategoriaQueries>()
         .AddTypeExtension<TiendaQueries>()
+        .AddTypeExtension<OfertaQueries>()
+        .AddTypeExtension<UsuarioQueries>()
+        .AddTypeExtension<FacturaQueries>()
     .AddMutationType(d => d.Name("Mutation"))
         .AddTypeExtension<TiendaMutations>()
         .AddTypeExtension<CategoriaMutations>()
+        .AddTypeExtension<FacturaMutations>()
+        .AddTypeExtension<OfertaMutations>()
+        .AddTypeExtension<UsuarioMutations>()
     .AddType<CategoriaType>()
     .AddType<AdministradorType>()
     .AddType<FacturaType>()
@@ -25,8 +35,8 @@ builder.Services
     .AddType<TiendaType>()
     .AddType<UsuarioType>()
     .AddDataLoader<CategoriaByIdDataLoader>()
-    .AddDataLoader<OfertaByIdDataLoader>();
-    //.EnableRelaySupport();
+    .AddDataLoader<OfertaByIdDataLoader>()
+    .EnableRelaySupport();
     
 
 
