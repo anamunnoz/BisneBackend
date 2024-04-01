@@ -1,0 +1,14 @@
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.csproj.AssemblyReference.cache
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.AssemblyInfoInputs.cache
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.AssemblyInfo.cs
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.csproj.CoreCompileInputs.cache
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\bin\Debug\net6.0\BisneBackend.AccesoDatos.deps.json
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\bin\Debug\net6.0\BisneBackend.AccesoDatos.dll
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\bin\Debug\net6.0\ref\BisneBackend.AccesoDatos.dll
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\bin\Debug\net6.0\BisneBackend.AccesoDatos.pdb
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.dll
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\ref\BisneBackend.AccesoDatos.dll
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.pdb
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\bin\Debug\net6.0\BisneBackend.AccesoDatos.runtimeconfig.json
+D:\PC\CODES\Bisne\Copia\BisneBackend\BisneBackend.AccesoDatos\obj\Debug\net6.0\BisneBackend.AccesoDatos.genruntimeconfig.cache
